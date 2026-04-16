@@ -6,7 +6,7 @@ function Profile() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    axios.get('http://localhost:5000/api/auth/profile', {
+    axios.get('https://jwtlogin-5gx2.onrender.com/', {
       headers: {
         Authorization: `Bearer ${token}`
       }

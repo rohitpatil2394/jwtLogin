@@ -9,7 +9,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', data);
+      const res = await axios.post('https://jwtlogin-5gx2.onrender.com/', data);
       localStorage.setItem('token', res.data.token);
       alert('Login successful');
       navigate('/profile');
