@@ -39,7 +39,7 @@ function AddProduct() {
     formData.append('image', image);
 
     try {
-      await axios.post('http://localhost:5000/api/products', formData, {
+      await axios.post('https://jwtlogin-5gx2.onrender.com/api/products', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

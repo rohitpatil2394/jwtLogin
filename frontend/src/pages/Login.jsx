@@ -24,7 +24,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://jwtlogin-5gx2.onrender.com/api/auth/login',
         data
       );
 

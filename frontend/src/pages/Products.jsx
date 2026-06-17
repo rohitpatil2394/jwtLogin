@@ -18,7 +18,7 @@ function Products() {
   // LOAD PRODUCTS
   useEffect(() => {
 
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://jwtlogin-5gx2.onrender.com/api/products')
       .then(res => setProducts(res.data));
 
   }, []);
@@ -29,7 +29,7 @@ function Products() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/cart',
+        'https://jwtlogin-5gx2.onrender.com/api/cart',
         { productId: id },
         {
           headers: {
@@ -52,7 +52,7 @@ function Products() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/wishlist',
+        'https://jwtlogin-5gx2.onrender.com/api/wishlist',
         { productId: id },
         {
           headers: {
@@ -79,7 +79,7 @@ function Products() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`,
+        `https://jwtlogin-5gx2.onrender.com/api/products/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

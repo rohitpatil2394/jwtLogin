@@ -7,7 +7,7 @@ function MyOrders() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/orders/my', {
+      .get('https://jwtlogin-5gx2.onrender.com/api/orders/my', {
         headers: {
           Authorization: `Bearer ${token}`
         }

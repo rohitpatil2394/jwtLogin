@@ -17,7 +17,7 @@ function ProductDetails() {
   useEffect(() => {
 
     axios.get(
-      `http://localhost:5000/api/products/${id}`
+      `https://jwtlogin-5gx2.onrender.com/api/products/${id}`
     )
     .then(res => {
       setProduct(res.data);
@@ -34,7 +34,7 @@ function ProductDetails() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/cart',
+        'https://jwtlogin-5gx2.onrender.com/api/cart',
         {
           productId: product._id
         },

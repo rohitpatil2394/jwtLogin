@@ -15,7 +15,7 @@ function Cart() {
   const loadCart = () => {
 
     axios.get(
-      'http://localhost:5000/api/cart',
+      'https://jwtlogin-5gx2.onrender.com/api/cart',
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -46,7 +46,7 @@ function Cart() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/cart/${id}`,
+        `https://jwtlogin-5gx2.onrender.com/api/cart/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -72,7 +72,7 @@ function Cart() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/cart/${id}`,
+        `https://jwtlogin-5gx2.onrender.com/api/cart/${id}`,
         { quantity: qty },
         {
           headers: {
@@ -97,7 +97,7 @@ function Cart() {
       // CREATE PAYMENT ORDER
       const { data } = await axios.post(
 
-        'http://localhost:5000/api/payment/create-order',
+        'https://jwtlogin-5gx2.onrender.com/api/payment/create-order',
 
         {
           amount: totalPrice
@@ -130,7 +130,7 @@ function Cart() {
           // PLACE ORDER AFTER PAYMENT SUCCESS
           await axios.post(
 
-            'http://localhost:5000/api/orders',
+            'https://jwtlogin-5gx2.onrender.com/api/orders',
 
             {},
 

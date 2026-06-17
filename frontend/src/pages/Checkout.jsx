@@ -18,7 +18,7 @@ function Checkout() {
   // LOAD OLD ADDRESS
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/address', {
+      .get('https://jwtlogin-5gx2.onrender.com/api/address', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -42,7 +42,7 @@ function Checkout() {
   const saveAddress = async () => {
     try {
       await axios.post(
-        'http://localhost:5000/api/address',
+        'https://jwtlogin-5gx2.onrender.com/api/address',
         form,
         {
           headers: {

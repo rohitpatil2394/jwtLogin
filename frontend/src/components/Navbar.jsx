@@ -21,7 +21,7 @@ function Navbar() {
     if (token && user.role !== 'admin') {
 
       axios.get(
-        'http://localhost:5000/api/cart',
+        'https://jwtlogin-5gx2.onrender.com/api/cart',
         {
           headers: {
             Authorization:

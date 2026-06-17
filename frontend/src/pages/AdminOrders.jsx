@@ -6,7 +6,7 @@ function AdminOrders() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/orders/all', {
+    axios.get('https://jwtlogin-5gx2.onrender.com/api/orders/all', {
       headers: {
         Authorization: `Bearer ${token}`
       }

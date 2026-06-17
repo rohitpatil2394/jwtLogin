@@ -18,7 +18,7 @@ function Wishlist() {
   const loadWishlist = () => {
 
     axios.get(
-      'http://localhost:5000/api/wishlist',
+      'https://jwtlogin-5gx2.onrender.com/api/wishlist',
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -43,7 +43,7 @@ function Wishlist() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/wishlist/${id}`,
+        `https://jwtlogin-5gx2.onrender.com/api/wishlist/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -67,7 +67,7 @@ function Wishlist() {
     try {
 
       await axios.post(
-        'http://localhost:5000/api/cart',
+        'https://jwtlogin-5gx2.onrender.com/api/cart',
         { productId: id },
         {
           headers: {

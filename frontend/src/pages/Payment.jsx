@@ -14,7 +14,7 @@ function Payment() {
 
       // GET CART
       const cartRes = await axios.get(
-        'http://localhost:5000/api/cart',
+        'https://jwtlogin-5gx2.onrender.com/api/cart',
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -34,7 +34,7 @@ function Payment() {
 
       // CREATE ORDER
       const orderRes = await axios.post(
-        'http://localhost:5000/api/payment/create-order',
+        'https://jwtlogin-5gx2.onrender.com/api/payment/create-order',
         { amount: total },
         {
           headers: {
@@ -61,7 +61,7 @@ function Payment() {
 
           // SAVE ORDER
           await axios.post(
-            'http://localhost:5000/api/orders',
+            'https://jwtlogin-5gx2.onrender.com/api/orders',
             {},
             {
               headers: {
